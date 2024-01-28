@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Can you turn the light on?</h1>
+        </div>
+        <div class="image">
+            <img id="img" src="img/off.png" alt="image">
+            <div class="buttons">
+                <button id="on" onclick="bulbOn()">Turn on the light</button>
+                <button id="off" onclick="bulbOff()">Turn off the light</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function bulbOn(){
+            document.body.style.backgroundColor = '#FFF8E3';
+            img = document.getElementById('img');
+            img.src = "img/on.png";
+        }
+        function bulbOff(){
+            document.body.style.backgroundColor = '';
+            img = document.querySelector('#img');
+            img.src = "img/off.png";
+        }
+    </script>
+
+</body>
+</html>
